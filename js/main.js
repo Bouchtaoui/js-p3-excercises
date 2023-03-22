@@ -1,29 +1,18 @@
 const MARIO_API = "https://www.amiiboapi.com/api/amiibo/";
 
-fetch(MARIO_API)
-	.then((response) => response.json())
-	.then((data) => {
-		console.log(data);
+// Doe een fetch
 
-		const row = document.querySelector(".row");
-		const list = data.amiibo;
-
-		for (let i = 0; i < 3; i++) {
-			const o = list[i];
-			row.innerHTML += createCard(o);
-		}
-	});
-
+// functie voor het maken van een card
 function createCard(item) {
 	const card = `
         <div class="card">
             <div class="img-container">
-                <img src="${item.image}" alt="Avatar" />
+                <img src="" alt="Avatar" />
             </div>
             <div class="container">
-                <p><b>${item.name}</b></p>
+                <p><b></b></p>
                 <div class="description">
-                    <p>${item.amiiboSeries}</p>
+                    <p></p>
                 </div>
             </div>
 		</div>
